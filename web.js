@@ -6,11 +6,8 @@ var getData = function(filename,response) {
     if (err) throw err;
     //console.log(data);
     response.send(data.toString('utf-8'));
-    return data;
  });
 };
-
-var d = new Buffer(1000);
 
 var app = express.createServer(express.logger());
 app.get('/', function(request, response) {
